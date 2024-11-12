@@ -10,8 +10,6 @@
 
 body {
   font-family: Lato, sans-serif;
-  color: #fff;
-  background-color: #0a0a0a;
   padding-top: 80px;
 }
 
@@ -187,35 +185,26 @@ header nav ul li a:hover {
 
 .hero {
   position: relative;
-  background-image: url("banner.jpg");
+  height: 70vh;
+  width: 100%;
+  background-image: url("banner.jpg"); /* Make sure the image path is correct */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 70vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  overflow: hidden; /* Ensures the image fits well */
-}
-
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Matches background-size: cover */
-  object-position: center; /* Matches background-position: center */
+  overflow: hidden;
 }
 
 .hero-text {
+  position: relative;
   max-width: 600px;
   margin-left: 10%;
   text-align: left;
   margin-top: 16%;
   color: #fff;
-  z-index: 1; /* Keeps text above the image */
+  z-index: 1;
 }
 
 .hero-text h1 {
@@ -764,6 +753,8 @@ footer p {
   font-weight: 900;
   font-style: normal;
   margin-bottom: 2rem;
+  color: white;
+  text-transform: uppercase;
 }
 
 .testimonial-grid {
@@ -1133,6 +1124,7 @@ footer p {
   flex-direction: column;
   text-align: center;
   width: 100%;
+  background-color: #002bff;
 }
 
 .accessibility h2 {
