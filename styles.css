@@ -148,20 +148,6 @@ header nav ul li a:hover {
   header .logo p {
     font-size: 0.9rem; /* Adjust font size for mobile */
   }
-  /* Hero section */
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero {
-    height: 40vh;
-  }
-
-  /* Button adjustments */
-  .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.85rem;
-  }
 
   /* Grid adjustments for single column */
   .features-grid,
@@ -237,7 +223,6 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
   .hero {
     height: 50vh; /* Adjust height for phones */
-    background-size: 485% auto; /* Increase image size for phones */
   }
 
   .hero-text {
@@ -258,7 +243,9 @@ header nav ul li a:hover {
 @media (max-width: 480px) {
   .hero {
     height: 40vh; /* Adjust height for very small screens */
-    background-size: cover;
+    background-size: 255%;
+    background-position: -800%;
+    background-position: center 465%;
   }
 
   .hero-text {
