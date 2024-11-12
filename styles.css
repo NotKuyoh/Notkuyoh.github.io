@@ -187,6 +187,10 @@ header nav ul li a:hover {
 
 .hero {
   position: relative;
+  background-image: url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   height: 70vh;
   display: flex;
   justify-content: flex-start;
