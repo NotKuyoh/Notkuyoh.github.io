@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOI - Features Overview</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Logo.svg" type="image/svg+xml">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><h1>JOI</h1></a>
-            <p>Your Personal Smart Home Voice Assistant</p>
+          <a href="index.html"><h1>JOI</h1></a>
+          <p>Your Personal Smart Home Voice Assistant</p>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="#">Status</a></li>
-                <li><a href="#">Updates</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="update.html">Updates</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
         </nav>
-    </header>
+        <!-- Burger menu icon -->
+        <div class="burger-menu" id="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
 
     <main>
         <div class="features-container">
@@ -85,18 +91,23 @@
         </section>
     </main>
 
-    <script>
-            
-    </script>
-
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-    </style>
-
     <footer>
         <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
     </footer>
 
+    <script>
+        // Select the burger menu and nav elements
+        const burgerMenu = document.getElementById("burger-menu");
+        const navMenu = document.querySelector("nav ul");
+      
+        // Toggle 'active' and 'menu-open' classes when burger menu is clicked
+        burgerMenu.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+          burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
+        });
+      </script>  
+
     <script src="script.js"></script>
+
 </body>
 </html>

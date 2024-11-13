@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+/* General Reset and Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,9 @@
 body {
   font-family: Lato, sans-serif;
   padding-top: 80px;
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  min-height: 100vh; /* Ensure the body takes full height of the viewport */
 }
 
 /* Header Layout */
@@ -93,9 +97,8 @@ header nav ul li a:hover {
 /* Responsive Layout for Mobile */
 @media (max-width: 768px) {
   header nav ul {
-    display: none; /* Hide the menu by default */
     position: absolute;
-    top: 60px;
+    top: 90px;
     right: 0;
     background-color: #111;
     padding: 1rem;
@@ -103,11 +106,21 @@ header nav ul li a:hover {
     flex-direction: column;
     width: 200px;
     z-index: 1000;
+    
+    /* Smooth transition settings */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, visibility 0s linear 0.4s;
   }
 
-  /* Show the menu when active class is added */
+  /* When active, the menu smoothly opens */
   header nav ul.active {
-    display: flex;
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
   }
 
   /* Burger menu */
@@ -131,9 +144,7 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
-  /* Adjustments for mobile view */
   header nav ul {
-    display: none; /* Hide the menu by default */
     position: absolute;
     top: 60px;
     right: 0;
@@ -143,31 +154,28 @@ header nav ul li a:hover {
     flex-direction: column;
     width: 200px;
     z-index: 1000;
+
+    /* Smooth transition settings */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, visibility 0s linear 0.4s;
+  }
+
+  /* When active, the menu smoothly opens */
+  header nav ul.active {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
   }
 
   header .logo p {
-    font-size: 0.9rem; /* Adjust font size for mobile */
-  }
-
-  /* Grid adjustments for single column */
-  .features-grid,
-  .benefit-grid,
-  .testimonial-grid,
-  .how-it-works-grid {
-    grid-template-columns: 1fr;
-    margin: 3rem;
-  }
-
-  /* Reduced padding for individual components */
-  .feature,
-  .benefit-card,
-  .how-it-step,
-  .testimonial {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 2rem;
+    font-size: 0.9rem;
   }
 }
+
 
 /* Hero section */
 .hero {
@@ -289,7 +297,7 @@ header nav ul li a:hover {
 
 /* Features Section */
 .features {
-  background-color: #393939;
+  background-color: #333;
   padding: 4rem 10%;
   text-align: center;
   color: #333;
@@ -506,10 +514,12 @@ html {
   }
 }
 
+/* Footer styling */
 footer {
   background-color: #111;
   padding: 2rem 10%;
   text-align: center;
+  margin-top: auto; /* Ensures the footer is pushed to the bottom */
 }
 
 footer p {
@@ -688,25 +698,6 @@ footer p {
   left: 40%;
   bottom: 120%;
   transform: rotate(-30deg);
-}
-
-/* Add responsiveness */
-@media (max-width: 768px) {
-  .benefits {
-    padding: 4rem 5%;
-  }
-  .benefit-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .benefits {
-    padding: 3rem 2%;
-  }
-  .benefit-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* How It Works Section */
@@ -1047,6 +1038,137 @@ footer p {
   color: #f1c40f;
 } /* yellow */
 
+/* For screen sizes up to 1200px */
+@media (max-width: 1200px) {
+  .features-header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Adjust the features header */
+  .features-header h2 {
+    font-size: 3.2rem; /* Slightly smaller font size */
+  }
+
+  .features-header p {
+    font-size: 1.4rem; /* Adjust paragraph text size */
+  }
+
+  /* Make the features-detail grid responsive (2-column layout for 1200px screens) */
+  .features-detail {
+    padding: 0 5%;
+    grid-template-columns: 1fr 1fr; /* 2 columns for slightly larger screens */
+    padding-bottom: 3rem;
+  }
+
+  /* Adjust the feature-detail layout */
+  .feature-detail {
+    padding: 1.8rem; /* Increase padding for better spacing */
+  }
+
+  /* Adjust font sizes for feature-detail header and paragraph */
+  .feature-detail h3 {
+    font-size: 1.6rem; /* Slightly smaller than default size */
+  }
+
+  .feature-detail p {
+    font-size: 1.1rem; /* Adjust for readability */
+  }
+
+  /* Adjust rotating text size */
+  .rotating-text p {
+    font-size: 3.8rem; /* Adjust the text size for medium screens */
+  }
+
+  .rotating-text p1 {
+    font-size: 3.8rem; /* Ensure the text size is consistent */
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust the features header */
+  .features-header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .features-header h2 {
+    font-size: 2.8rem;
+  }
+  
+  .features-header p {
+    font-size: 1.2rem;
+  }
+
+  /* Make the features-detail grid responsive (single column layout) */
+  .features-detail {
+    padding: 0 5%;
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem; /* Single column for smaller screens */
+  }
+
+  /* Adjust the feature-detail layout */
+  .feature-detail {
+    padding: 1.5rem;
+  }
+
+  /* Adjust font sizes for feature-detail header and paragraph */
+  .feature-detail h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-detail p {
+    font-size: 1rem;
+  }
+
+  /* Adjust rotating text size */
+  .rotating-text p {
+    font-size: 2.5rem;
+  }
+
+    /* Adjust rotating text size */
+  .rotating-text p1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  /* Further adjustments for smaller screens like mobile phones */
+  .features-header h2 {
+    font-size: 2.2rem;
+    padding: 10%;
+  }
+  
+  .features-header p {
+    font-size: 1rem;
+  }
+
+  .features-detail {
+    padding: 0 5%;
+  }
+
+  .feature-detail {
+    padding: 1rem;
+  }
+
+  .feature-detail h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-detail p {
+    font-size: 0.9rem;
+  }
+
+  .rotating-text p {
+    font-size: 2rem;
+  }
+
+  .rotating-text p1 {
+    font-size: 2rem;
+  }
+}
+
+
 /* Modal Styles */
 .modal {
   display: none; /* Hidden by default */
@@ -1156,7 +1278,7 @@ footer p {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  background-color: #777777;
+  background-color: #393939;
 }
 
 .accessibility h2 {
@@ -1370,13 +1492,133 @@ footer p {
   background-color: #e65c00;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  /* General font scaling */
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-  .btn {
-    font-size: 1rem;
-  }
+/* About Section Container */
+.about-section {
+  width: 100%;
+  max-width: 1000px;
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/* Header Styling for About Page */
+.about-section h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* Sub-headings in the About Section */
+.about-section h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* Styling for the paragraph text in the about section */
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+/* Highlight Styling */
+.about-section mark {
+  background: #ffe58f; /* Soft yellow background for highlight */
+  padding: 0.15em;
+  color: #333;
+  border-radius: 4px;
+  transition: background-color 0.4s ease, transform 0.4s ease; /* Smooth transition */
+}
+
+/* Animation for highlighted elements */
+.about-section mark.highlight {
+  background-color: #ffd54f; /* Brighter yellow when in view */
+  transform: scale(1.05); /* Slightly increase size for emphasis */
+}
+
+
+
+/* Apply to the update page only */
+#updates-page {
+  position: relative; /* Positioning context for the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+#updates-page::before {
+  content: ""; /* Empty content to create the overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('banner_bg.png'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.5; /* 50% transparency */
+  z-index: 1; /* Make sure the background is below the content */
+}
+
+.updates-container {
+  position: relative; /* Make the container content sit above the overlay */
+  z-index: 2; /* Ensure content stays above the background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.message h1 {
+  font-size: 3.5rem;
+  color: #000000;
+}
+
+.message p {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 1rem;
+}
+
+.loading {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #111;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image-container img {
+  max-width: 100%;
+  width: 300px;
+  margin-top: 2rem;
 }

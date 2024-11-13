@@ -3,55 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About JOI</title>    
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you will link your CSS here -->
+    <link rel="icon" href="Logo.svg" type="image/svg+xml">
 </head>
 <body>
 
     <!-- Header Section -->
-    <header class="about-header">
-        <h1>Looking for a Reliable Partner to Bring Your Ideas to Life?</h1>
-        <p>In a fast-paced world of innovation, finding the right partner can be tough. Let us show you how we make a difference.</p>
-    </header>
+    <header>
+        <div class="logo">
+          <a href="index.html"><h1>JOI</h1></a>
+          <p>Your Personal Smart Home Voice Assistant</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="update.html">Updates</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <!-- Burger menu icon -->
+        <div class="burger-menu" id="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
 
-    <!-- Problem and Solution Sections -->
-    <div class="about-container">
-        <section class="about-section">
-            <div class="section-title">
-                <h2>Your Challenges</h2>
-            </div>
-            <div class="problem-container">
-                <div class="problem">
-                    <h3>Struggling with Project Overload?</h3>
-                    <p>Overwhelmed with the amount of work? We help manage and guide projects, so you focus on your growth.</p>
-                </div>
-                <div class="problem">
-                    <h3>Facing Skill Gaps?</h3>
-                    <p>We fill in the gaps with specialized expertise, so you don't have to worry about hiring extra resources.</p>
-                </div>
-            </div>
-        </section>
+    <!-- Main Content Section -->
+    <main id="about-page">
+        <div class="about-section">
+            <h2>About Me & My Project</h2>
+            <p>
+                When I moved into a <mark>larger home</mark>, I quickly realized the <mark>everyday tasks</mark> I had taken for granted were no longer as simple as they once were. Switching lights on and off, adjusting the temperature, or even monitoring the state of various devices around the house felt like a <mark>hassle</mark>. I wanted a <mark>smarter way to manage my home</mark>. Something that would make life <mark>easier</mark>, <mark>more connected</mark>, and <mark>more efficient</mark>. That's when the idea for my project, <mark>JOI™</mark> (short for "Just One Intelligence"), was born — a <mark>voice assistant</mark> designed to manage all these tasks and more, all with the <mark>convenience of my voice</mark>.
+            </p>
 
-        <section class="about-section">
-            <div class="section-title">
-                <h2>How We Can Help</h2>
-            </div>
-            <div class="solution-container">
-                <div class="solution">
-                    <h3>Strategic Guidance</h3>
-                    <p>We don’t just execute tasks; we provide thoughtful insights to guide the project and drive success.</p>
-                </div>
-                <div class="solution">
-                    <h3>Reliable Expertise</h3>
-                    <p>With our specialized knowledge, you can be assured that your project is in the hands of experts.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+            <h3>Why I Started This Project</h3>
+            <p>
+                I started with a simple idea: create something that could help <mark>automate my home</mark>. But like many great ideas, this one began to <mark>evolve</mark>. As I dug deeper, I realized that <mark>existing smart home assistants</mark> came with a major downside: they were tied to <mark>large corporations</mark>. This meant I had <mark>little control over my own data</mark>. I wanted something <mark>more personal</mark>, something I could <mark>fully trust</mark>. That’s when I decided to build my own voice assistant, from the ground up, with <mark>privacy and independence at its core</mark>.
+            </p>
 
+            <h3>Learning & Development</h3>
+            <p>
+                At the very beginning, I had <mark>no experience in programming</mark>. But I didn’t let that stop me. I turned to the wealth of knowledge available online, using resources like <mark>ChatGPT, YouTube, and GitHub</mark> to learn Python. I bought a <mark>Raspberry Pi 3 Zero</mark>, an <mark>ESP32</mark>, and an <mark>Arduino</mark>, and started experimenting. My first successful project was <mark>controlling lights behind my TV</mark> using an LED strip and ESP32, which I programmed to run with the <mark>WLED software</mark>. The excitement of making something work got me <mark>hooked</mark>. But as I looked around my home, I realized there was <mark>more to be done</mark>. I wanted to <mark>control every light, every device, and every aspect of my home</mark> seamlessly. That’s when the idea of a <mark>Smart Voice Assistant</mark> started to take shape.
+            </p>
+
+            <h3>Challenges & Motivation</h3>
+            <p>
+                The journey from there was a <mark>steep learning curve</mark>. I started by creating a <mark>rule-based intent recognition system</mark>, but soon realized I needed something more advanced to make conversations feel <mark>natural</mark>. That’s when I decided to incorporate <mark>Llama</mark>, an <mark>AI model</mark>, to handle <mark>non-rule-based inputs and responses</mark>. <mark>JOI™</mark> became something more than just a tool — she became an <mark>intelligent assistant</mark> that could <mark>interact with me in a more human way</mark>. I named her <mark>JOI™</mark> after my friend, whose favorite movie is <mark>Blade Runner</mark> and whose favorite role is called <mark>JOI™</mark>. The name felt fitting, as it represented something both <mark>futuristic and personal</mark>.
+            </p>
+            <p>
+                Despite the many <mark>challenges</mark> I faced, including learning from scratch and solving technical issues, I remained <mark>motivated</mark>. Coding can be time-consuming, and the journey is rarely smooth. Bugs, errors, and unexpected obstacles are part of the process. But every time I <mark>fixed a problem</mark> or saw a project come to life, the <mark>sense of accomplishment</mark> fueled my drive. There was something incredibly satisfying about creating a <mark>fully functional assistant</mark> that could handle so many tasks.
+            </p>
+
+            <h3>Personal Use & Sharing the Code</h3>
+            <p>
+                <mark>JOI™</mark> started as a <mark>personal project</mark>, something built for <mark>my own use</mark>. I didn’t initially plan to <mark>share the source code</mark> with the world, but as the project grew, I started to consider it. After all, the project’s journey could be helpful to others who are on the same path or looking to create their own <mark>smart home solutions</mark>. Still, I’ve yet to make that decision, as the project is very personal to me and I want to make sure it’s <mark>ready</mark> before opening it up to the public.
+            </p>
+
+            <h3>Future Vision</h3>
+            <p>
+                Looking forward, I have <mark>big plans</mark> for <mark>JOI™</mark>. My goal is to place the code on a <mark>running device</mark> that I can <mark>access from anywhere</mark>, allowing me to control my home no matter where I am. But that’s just the beginning. I’m also considering integrating <mark>JOI™ with smart glasses</mark> to bring the assistant’s features even closer to me, making it truly <mark>hands-free and seamless</mark>.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                Creating <mark>JOI™</mark> has been an <mark>incredible journey</mark>. From <mark>learning to code</mark> to developing something that truly makes <mark>life easier</mark>, it’s been both challenging and rewarding. I can’t wait to see where the project goes from here, and I’m <mark>excited about the future of smart, independent home automation</mark>.
+            </p>
+            <p>
+                Thank you for taking the time to read my story. I hope you find <mark>JOI™</mark> as exciting and useful as I do!
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer Section (optional) -->
     <footer>
-        <button class="contact-button">Get in Touch</button>
+        <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
     </footer>
+    <script>
+                document.addEventListener('DOMContentLoaded', function () {
+            const marks = document.querySelectorAll('.about-section mark');
 
+            function animateMarks() {
+                marks.forEach(mark => {
+                    const rect = mark.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        mark.classList.add('highlight');
+                    } else {
+                        mark.classList.remove('highlight');
+                    }
+                });
+            }
+
+            // Run animation on scroll
+            window.addEventListener('scroll', animateMarks);
+
+            // Initial check in case some marks are already in view
+            animateMarks();
+        });
+    </script>
+    <script>highlight.js</script>  
 </body>
 </html>

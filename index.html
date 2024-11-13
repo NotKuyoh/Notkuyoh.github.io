@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet JOI</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Logo.svg" type="image/svg+xml">
   </head>
   <body>
+
     <header>
       <div class="logo">
         <a href="index.html"><h1>JOI</h1></a>
@@ -16,8 +18,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="features.html">Features</a></li>
-          <li><a href="#">Status</a></li>
-          <li><a href="#">Updates</a></li>
+            <li><a href="update.html">Updates</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
@@ -43,7 +44,7 @@
       <!-- Features Section -->
       <section id="features" class="features">
         <section class="features-introduction">
-          <h3>Explore Our Advanced Features</h3>
+          <h3>Explore JOI's Features</h3>
           <p>
             JOI™ integrates cutting-edge technology to provide seamless control,
             real-time interactions, and smarter living. Discover the features
@@ -361,9 +362,11 @@
         </form>
       </section>
     </main>
+
     <footer>
       <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
     </footer>
+
     <!-- jQuery CDN -->
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -379,11 +382,12 @@
       // Select the burger menu and nav elements
       const burgerMenu = document.getElementById("burger-menu");
       const navMenu = document.querySelector("nav ul");
-
-      // Toggle 'active' class when burger menu is clicked
+    
+      // Toggle 'active' and 'menu-open' classes when burger menu is clicked
       burgerMenu.addEventListener("click", function () {
         navMenu.classList.toggle("active");
+        burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
       });
-    </script>
+    </script>    
   </body>
 </html>
