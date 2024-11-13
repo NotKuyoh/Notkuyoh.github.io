@@ -243,9 +243,6 @@ header nav ul li a:hover {
 @media (max-width: 480px) {
   .hero {
     height: 40vh; /* Adjust height for very small screens */
-    background-size: 255%;
-    background-position: -800%;
-    background-position: center 465%;
   }
 
   .hero-text {
