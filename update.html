@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About JOI</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming you will link your CSS here -->
-    <link rel="icon" href="Logo.svg" type="image/svg+xml">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Assuming you will link your CSS here -->
+    <link rel="icon" href="Logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
     <!-- Header Section -->
     <header>
-        <div class="logo">
-          <a href="index.html"><h1>JOI</h1></a>
-          <p>Your Personal Smart Home Voice Assistant</p>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="update.html">Updates</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-        <!-- Burger menu icon -->
-        <div class="burger-menu" id="burger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div class="logo">
+        <a href="index.html"><h1>JOI</h1></a>
+        <p>Your Personal Smart Home Voice Assistant</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <!-- Burger menu icon -->
+      <div class="burger-menu" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
     <!-- Main Content Section -->
     <main id="updates-page">
-        <div class="updates-container">
-            <div class="message">
-                <h1>Coming Soon</h1>
-                <p>We're working hard to bring you exciting new updates. Stay tuned!</p>
-            </div>
-
-            <!-- Loading animation -->
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
+      <div class="updates-container">
+        <div class="message">
+          <h1>Coming Soon</h1>
+          <p>
+            We're working hard to bring you exciting new updates. Stay tuned!
+          </p>
         </div>
+
+        <!-- Loading animation -->
+        <div class="loading">
+          <div class="spinner"></div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
+      <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
     </footer>
 
     <script>
-        // Select the burger menu and nav elements
-        const burgerMenu = document.getElementById("burger-menu");
-        const navMenu = document.querySelector("nav ul");
-      
-        // Toggle 'active' and 'menu-open' classes when burger menu is clicked
-        burgerMenu.addEventListener("click", function () {
-          navMenu.classList.toggle("active");
-          burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
-        });
-      </script>  
-</body>
+      // Select the burger menu and nav elements
+      const burgerMenu = document.getElementById("burger-menu");
+      const navMenu = document.querySelector("nav ul");
+
+      // Toggle 'active' and 'menu-open' classes when burger menu is clicked
+      burgerMenu.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+        burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
+      });
+    </script>
+  </body>
 </html>

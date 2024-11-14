@@ -20,7 +20,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="features.html">Features</a></li>
-          <li><a href="update.html">Updates</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
@@ -162,31 +162,8 @@
     <footer>
       <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const marks = document.querySelectorAll(".about-section mark");
 
-        function animateMarks() {
-          marks.forEach((mark) => {
-            const rect = mark.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-              mark.classList.add("highlight");
-            } else {
-              mark.classList.remove("highlight");
-            }
-          });
-        }
-
-        // Run animation on scroll
-        window.addEventListener("scroll", animateMarks);
-
-        // Initial check in case some marks are already in view
-        animateMarks();
-      });
-    </script>
-    <script>
-      highlight.js;
-    </script>
+    <script src="highlight.js"></script>
 
     <script>
       // Select the burger menu and nav elements
