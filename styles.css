@@ -12,11 +12,12 @@
 
 html, body {
   font-family: Lato, sans-serif;
-  padding-top: 80px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -87,6 +88,10 @@ header nav ul {
   display: none; /* Hidden by default */
 }
 
+/* Responsive Layout for Mobile */
+
+
+
 /* Hero section */
 .hero {
   position: relative;
@@ -95,7 +100,7 @@ header nav ul {
   background-image: url("banner.jpg"); /* Ensure the image path is correct */
   background-size: cover; /* Ensure image covers the entire section */
   background-position: center; /* Center the image */
-  background-attachment: fixed; /* Keep the image fixed while scrolling */
+  background-attachment: scroll; /* Keep the image fixed while scrolling */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -275,12 +280,6 @@ header nav ul {
 
 .glow-on-hover:hover:before {
   opacity: 1;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Adjust this value to match the height of your header */
 }
 
 /* Active Effect for Glow Button */
@@ -1518,8 +1517,6 @@ footer p {
   .hero {
     background-image: url("banner-2.jpg");
     height: 40vh;
-    background-size: cover;
-    background-attachment: scroll;
   }
 
   .hero-text {
@@ -1648,9 +1645,6 @@ footer p {
 }
 
 @media (max-width: 480px) {
-  header {
-    width: 100%;
-  }
   header nav ul {
     position: absolute;
     top: 60px;
@@ -1659,7 +1653,7 @@ footer p {
     padding: 1rem;
     border-radius: 5px;
     flex-direction: column;
-    width: 100%;
+    width: 200px;
     z-index: 1000;
     max-height: 0;
     overflow: hidden;
@@ -1673,9 +1667,6 @@ footer p {
     opacity: 1;
     visibility: visible;
     transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
-    position: absolute; /* Keep it inside the viewport */
-    right: 0;
-    max-width: 100%;
   }
 
   header .logo p {
