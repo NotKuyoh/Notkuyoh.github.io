@@ -10,7 +10,7 @@
   --unlocked-color: #ff5153;
 }
 
-body {
+html, body {
   font-family: Lato, sans-serif;
   padding-top: 80px;
   display: flex;
@@ -86,10 +86,6 @@ header nav ul {
 .burger-menu {
   display: none; /* Hidden by default */
 }
-
-/* Responsive Layout for Mobile */
-
-
 
 /* Hero section */
 .hero {
@@ -1652,6 +1648,9 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  header {
+    width: 100%;
+  }
   header nav ul {
     position: absolute;
     top: 60px;
@@ -1660,7 +1659,7 @@ footer p {
     padding: 1rem;
     border-radius: 5px;
     flex-direction: column;
-    width: 200px;
+    width: 100%;
     z-index: 1000;
     max-height: 0;
     overflow: hidden;
@@ -1674,6 +1673,9 @@ footer p {
     opacity: 1;
     visibility: visible;
     transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    position: absolute; /* Keep it inside the viewport */
+    right: 0;
+    max-width: 100%;
   }
 
   header .logo p {
