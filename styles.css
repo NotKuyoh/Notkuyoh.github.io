@@ -1368,7 +1368,7 @@ main#updates-page {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
 }
 
-/* Rest of your styles remain the same */
+/* Updates Container */
 .updates-container {
   background: #2a2a2a;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -1441,22 +1441,55 @@ main#updates-page {
   padding: 0 10px;
 }
 
-.update-content p {
+/* Lists for Update Content */
+.update-content ul {
+  list-style-type: none; /* Remove default bullet points */
   margin: 10px 0;
-  font-size: 1em;
-  color: #ddd; /* Lighter text for better visibility */
+  padding-left: 0;
 }
 
-.update-content strong {
-  color: #fff; /* Bright white for emphasized text */
+.update-content li {
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+  margin-bottom: 15px; /* Space between list items */
+  padding: 15px;
+  background-color: #292929; /* Darker background for list items */
+  border: 1px solid #444; /* Subtle border around list items */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.update-content code {
+.update-content li:hover {
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.update-content li strong {
+  font-weight: bold;
+  color: #f0f0f0;
+  margin-bottom: 5px;
+}
+
+.update-content li code {
   font-family: "Courier New", Courier, monospace;
-  background-color: #333; /* Dark background for code blocks */
-  color: #f0f0f0; /* Light text for code */
+  background-color: #333;
+  color: #f0f0f0;
   padding: 2px 4px;
-  border-radius: 3px;
+  border-radius: 4px;
+}
+
+/* Nested Lists */
+.update-content ul ul {
+  margin: 10px 0 0 20px; /* Indent nested lists */
+  padding: 0;
+}
+
+.update-content ul ul li {
+  background-color: #333; /* Darker background for nested items */
+  border: none; /* Remove border for nested items */
+  box-shadow: none; /* No shadow for nested items */
+  padding: 5px 10px; /* Smaller padding for nested items */
 }
 
 /* Image Styling */
@@ -1466,27 +1499,31 @@ main#updates-page {
 }
 
 .update-image img {
-  max-width: 60%; /* Ensures the image is responsive */
+  max-width: 50%; /* Default size for larger screens */
   height: auto; /* Maintains aspect ratio */
 }
 
 .image-caption {
-  font-size: 0.9em; /* Slightly smaller font for the caption */
-  color: #aaa; /* Muted color to differentiate the caption */
-  margin-top: 5px; /* Adds spacing between the image and caption */
-  text-align: left; /* Aligns caption with the image */
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 5px;
+  text-align: center;
 }
 
-/* Responsive Image for Tablets and Phones */
+/* Responsive Styles for Desktop, Tablet, and Mobile */
 @media (max-width: 1024px) {
   .update-image img {
-    max-width: 80%; /* Increases size for tablets */
+    max-width: 70%; /* Larger image on tablets */
   }
 }
 
 @media (max-width: 768px) {
   .update-image img {
-    max-width: 100%; /* Increases size for phones */
+    max-width: 100%; /* Full width image on phones */
+  }
+
+  .update-content li {
+    flex-direction: column; /* Stack content vertically on smaller screens */
   }
 }
 

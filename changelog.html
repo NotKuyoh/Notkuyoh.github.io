@@ -38,56 +38,69 @@
               <span class="toggle-icon">+</span>
             </button>
             <div class="update-content" aria-hidden="true">
-              <p>
-                <strong>Improved Weather Forecast Functionality:</strong>
-                Integrated a 3-day weather forecast using the Open-Meteo API.
-                Added German formatting for better local clarity. Enhanced prompts
-                to guide AI models in analyzing the forecast effectively.
-              </p>
-              <p>
-                <strong>Application Restart Functionality:</strong> Implemented a
-                robust restart mechanism for the application using
-                <code>os.execv</code>. Added error handling to manage potential
-                restart issues gracefully.
-              </p>
-              <p>
-                <strong>Loading Animation Improvements:</strong> The loading
-                animation now runs seamlessly and triggers speech handling after 5
-                seconds for better synchronization.
-              </p>
-              <p>
-                <strong>Code Refinements:</strong> Improved modularity and error
-                handling across several features. Enhanced UI updates with PyQt
-                signals to maintain consistency.
-              </p>
-              <p>
-                <strong>Debugging and Testing:</strong> Verified weather forecast,
-                application restart, and loading animation integration for smooth
-                functionality.
-              </p>
-              <p>
-                <strong>Improved UI Design and Layout:</strong> Redesigned the
-                user interface to enhance usability and aesthetics:
-                <ul>
-                  <li>
-                    Optimized the layout for better accessibility, ensuring clear
-                    navigation and responsive design across devices.
-                  </li>
-                  <li>
-                    Improved color contrast to align with accessibility standards,
-                    ensuring a better experience for visually impaired users.
-                  </li>
-                  <li>
-                    Simplified interaction patterns, reducing cognitive load for
-                    users by creating a more intuitive experience.
-                  </li>
-                  
-                </ul>
-              </p>
-              <div class="update-image">
-                <img src="Ui_compare.png" alt="Comparison of UI design before and after improvements">
-                <p class="image-caption">A comparison of the UI design before and after the improvements in November 2024.</p>
-              </div>
+              <ul>
+                <li>
+                  <strong>Improved Weather Forecast Functionality:</strong>
+                  Integrated a 3-day weather forecast using the Open-Meteo API.
+                  Added German formatting for better local clarity. Enhanced
+                  prompts to guide AI models in analyzing the forecast
+                  effectively.
+                </li>
+                <li>
+                  <strong>Application Restart Functionality:</strong>
+                  Implemented a robust restart mechanism for the application
+                  using <code>os.execv</code>. Added error handling to manage
+                  potential restart issues gracefully.
+                </li>
+                <li>
+                  <strong>Loading Animation Improvements:</strong>
+                  The loading animation now runs seamlessly and triggers speech
+                  handling after 5 seconds for better synchronization.
+                </li>
+                <li>
+                  <strong>Code Refinements:</strong>
+                  Improved modularity and error handling across several
+                  features. Enhanced UI updates with PyQt signals to maintain
+                  consistency.
+                </li>
+                <li>
+                  <strong>Improved UI Design and Layout:</strong>
+                  Redesigned the user interface to enhance usability and
+                  aesthetics:
+                  <ul>
+                    <li>
+                      Optimized the layout for better accessibility, ensuring
+                      clear navigation and responsive design across devices.
+                    </li>
+                    <li>
+                      Improved color contrast to align with accessibility
+                      standards, ensuring a better experience for visually
+                      impaired users.
+                    </li>
+                    <li>
+                      Simplified interaction patterns, reducing cognitive load
+                      for users by creating a more intuitive experience.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="update-image">
+                    <img
+                      src="Ui_compare.png"
+                      alt="Comparison of UI design before and after improvements"
+                    />
+                    <p class="image-caption">
+                      A comparison of the UI design before and after the
+                      improvements in November 2024.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <strong>Debugging and Testing:</strong>
+                  Verified weather forecast, application restart, and loading
+                  animation integration for smooth functionality.
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -98,10 +111,12 @@
               <span class="toggle-icon">+</span>
             </button>
             <div class="update-content" aria-hidden="true">
-              <p>
-                Added voice-interruption feature allowing wakeword to be used
-                anytime.
-              </p>
+              <ul>
+                <li>
+                  Added voice-interruption feature allowing the wakeword to be
+                  used anytime.
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -112,27 +127,21 @@
               <span class="toggle-icon">+</span>
             </button>
             <div class="update-content" aria-hidden="true">
-              <p>
-                Integrated real-time conversation processing with Ollama AI
-                model for seamless interaction.
-              </p>
+              <ul>
+                <li>
+                  Integrated real-time conversation processing with Ollama AI
+                  model for seamless interaction.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </main>
     </div>
 
-    <script>
-      // Select the burger menu and nav elements
-      const burgerMenu = document.getElementById("burger-menu");
-      const navMenu = document.querySelector("nav ul");
-
-      // Toggle 'active' and 'menu-open' classes when burger menu is clicked
-      burgerMenu.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-        burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
-      });
-    </script>
+    <footer>
+      <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
+    </footer>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -163,9 +172,5 @@
         });
       });
     </script>
-
-    <footer>
-      <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
-    </footer>
   </body>
 </html>
