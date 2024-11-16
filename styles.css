@@ -10,7 +10,8 @@
   --unlocked-color: #ff5153;
 }
 
-html, body {
+html,
+body {
   font-family: Lato, sans-serif;
   padding-top: 50px;
   display: flex;
@@ -89,8 +90,6 @@ header nav ul {
 }
 
 /* Responsive Layout for Mobile */
-
-
 
 /* Hero section */
 .hero {
@@ -949,7 +948,6 @@ footer p {
   color: #f1c40f;
 }
 
-
 /* For screen sizes up to 1200px */
 @media (max-width: 1200px) {
   .features-header {
@@ -1000,8 +998,6 @@ footer p {
     font-size: 3.8rem; /* Ensure the text size is consistent */
   }
 }
-
-
 
 /* Modal Styles */
 .modal {
@@ -1169,7 +1165,8 @@ footer p {
   max-width: 600px;
   text-align: left; /* Align text to the left */
   line-height: 1.5rem;
-  padding-left: 3rem;    overflow-wrap: break-word;
+  padding-left: 3rem;
+  overflow-wrap: break-word;
   hyphens: auto;
   margin-top: 20px;
   color: white;
@@ -1192,10 +1189,6 @@ footer p {
   margin-bottom: 1rem;
   text-align: left; /* Ensure paragraphs align left */
 }
-
-
-
-
 
 /* Header Section */
 .about-header {
@@ -1335,40 +1328,107 @@ footer p {
   transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
-/* Apply to the update page only */
+/* General styles */
 #updates-page {
-  position: relative; /* Positioning context for the overlay */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  text-align: center;
+  justify-content: center; /* Center horizontally */
+  height: auto; /* Full viewport height for centering */
   padding: 3rem 0;
+  font-family: "Lato", sans-serif;
 }
 
 #updates-page::before {
-  content: ""; /* Empty content to create the overlay */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("banner_bg.png"); /* Add your background image here */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  opacity: 0.5; /* 50% transparency */
-  z-index: 1; /* Make sure the background is below the content */
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .updates-container {
-  position: relative; /* Make the container content sit above the overlay */
-  z-index: 2; /* Ensure content stays above the background */
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.updates-title {
+  font-family: "Lato";
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.updates-description {
+  font-family: "Lato";
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #6200ff;
+}
+
+/* Update entry styles */
+.update-entry {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.toggle-header {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+.toggle-header:hover {
+  background: #f9f9f9;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.toggle-header[aria-expanded="true"] .toggle-icon {
+  color: #6200ff;
+}
+
+.update-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  background: #f7f7f7;
+  border-left: 4px solid #6200ff;
+  border-radius: 0 0 5px 5px;
+}
+
+.update-content p {
+  font-family: "Lato";
+  padding: 1rem 0;
+  margin: 0;
+  color: #6200ff;
+}
+
+/* Accessibility improvements */
+.toggle-header:focus {
+  outline: 2px solid #6200ff;
+  outline-offset: 2px;
 }
 
 .message h1 {
@@ -1486,7 +1546,8 @@ footer p {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, visibility 0s linear 0.4s;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out,
+      visibility 0s linear 0.4s;
   }
 
   header nav ul.active {
@@ -1659,7 +1720,8 @@ footer p {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, visibility 0s linear 0.4s;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out,
+      visibility 0s linear 0.4s;
   }
 
   header nav ul.active {

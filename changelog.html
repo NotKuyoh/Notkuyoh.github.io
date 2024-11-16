@@ -25,29 +25,105 @@
 
     <main id="updates-page">
       <div class="updates-container">
-        <h2>Changelog</h2>
-        <p>Track JOI's latest progress and features!</p>
+        <h2 class="updates-title">Changelog</h2>
+        <p class="updates-description">
+          Track JOI's latest progress and features!
+        </p>
 
         <!-- Example Update Entry -->
         <div class="update-entry">
-          <h3>September 2024</h3>
-          <p>
-            Added voice-interruption feature allowing wakeword to be used
-            anytime.
-          </p>
+          <button class="toggle-header" aria-expanded="false">
+            <span>November 2024</span>
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="update-content" aria-hidden="true">
+            <p>
+              <strong>Improved Weather Forecast Functionality:</strong>
+              Integrated a 3-day weather forecast using the Open-Meteo API.
+              Added German formatting for better local clarity. Enhanced prompts
+              to guide AI models in analyzing the forecast effectively.
+            </p>
+            <p>
+              <strong>Application Restart Functionality:</strong> Implemented a
+              robust restart mechanism for the application using
+              <code>os.execv</code>. Added error handling to manage potential
+              restart issues gracefully.
+            </p>
+            <p>
+              <strong>Loading Animation Improvements:</strong> The loading
+              animation now runs seamlessly and triggers speech handling after 5
+              seconds for better synchronization.
+            </p>
+            <p>
+              <strong>Code Refinements:</strong> Improved modularity and error
+              handling across several features. Enhanced UI updates with PyQt
+              signals to maintain consistency.
+            </p>
+            <p>
+              <strong>Debugging and Testing:</strong> Verified weather forecast,
+              application restart, and loading animation integration for smooth
+              functionality.
+            </p>
+          </div>
         </div>
 
         <div class="update-entry">
-          <h3>August 2024</h3>
-          <p>
-            Integrated real-time conversation processing with Ollama AI model
-            for seamless interaction.
-          </p>
+          <button class="toggle-header" aria-expanded="false">
+            <span>September 2024</span>
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="update-content" aria-hidden="true">
+            <p>
+              Added voice-interruption feature allowing wakeword to be used
+              anytime.
+            </p>
+          </div>
         </div>
 
-        <!-- Add more entries as needed -->
+        <div class="update-entry">
+          <button class="toggle-header" aria-expanded="false">
+            <span>August 2024</span>
+            <span class="toggle-icon">+</span>
+          </button>
+          <div class="update-content" aria-hidden="true">
+            <p>
+              Integrated real-time conversation processing with Ollama AI model
+              for seamless interaction.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggles = document.querySelectorAll(".toggle-header");
+        toggles.forEach((toggle) => {
+          toggle.addEventListener("click", () => {
+            const content = toggle.nextElementSibling;
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+
+            // Close all open content
+            document.querySelectorAll(".update-content").forEach((c) => {
+              c.style.maxHeight = null;
+              c.setAttribute("aria-hidden", "true");
+            });
+            document.querySelectorAll(".toggle-header").forEach((t) => {
+              t.setAttribute("aria-expanded", "false");
+              t.querySelector(".toggle-icon").textContent = "+";
+            });
+
+            // Toggle the clicked content
+            if (!isExpanded) {
+              toggle.setAttribute("aria-expanded", "true");
+              toggle.querySelector(".toggle-icon").textContent = "−";
+              content.style.maxHeight = content.scrollHeight + "px";
+              content.setAttribute("aria-hidden", "false");
+            }
+          });
+        });
+      });
+    </script>
 
     <footer>
       <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
