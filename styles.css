@@ -1347,10 +1347,6 @@ footer p {
   margin-top: 2rem;
 }
 
-.site {
-  background-color: #000000;
-}
-
 /* Wrapper for Dark Background */
 .wrapper {
   background-color: #393939; /* Dark background for the entire page */
@@ -1470,7 +1466,7 @@ main#updates-page {
 }
 
 .update-image img {
-  max-width: 50%; /* Ensures the image is responsive */
+  max-width: 60%; /* Ensures the image is responsive */
   height: auto; /* Maintains aspect ratio */
 }
 
@@ -1479,6 +1475,19 @@ main#updates-page {
   color: #aaa; /* Muted color to differentiate the caption */
   margin-top: 5px; /* Adds spacing between the image and caption */
   text-align: left; /* Aligns caption with the image */
+}
+
+/* Responsive Image for Tablets and Phones */
+@media (max-width: 1024px) {
+  .update-image img {
+    max-width: 80%; /* Increases size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .update-image img {
+    max-width: 100%; /* Increases size for phones */
+  }
 }
 
 @media (max-width: 768px) {
