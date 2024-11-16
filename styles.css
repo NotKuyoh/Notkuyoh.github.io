@@ -45,10 +45,14 @@ header .logo a {
 }
 
 header nav ul li a {
-  color: #f0f0f0;
+  color: #f0f0f0; /* Default color */
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #6200ff; /* Color change on hover */
 }
 
 header .logo h1 {
@@ -1328,136 +1332,6 @@ footer p {
   transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
-/* General styles */
-#updates-page {
-  justify-content: center; /* Center horizontally */
-  height: auto; /* Full viewport height for centering */
-  padding: 3rem 0;
-  font-family: "Lato", sans-serif;
-}
-
-#updates-page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-  z-index: -1;
-}
-
-.updates-container {
-  max-width: 800px;
-  width: 100%;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.updates-title {
-  font-family: "Lato";
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.updates-description {
-  font-family: "Lato";
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #6200ff;
-}
-
-/* Update entry styles */
-.update-entry {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.toggle-header {
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #333;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  border-radius: 5px;
-}
-
-.toggle-header:hover {
-  background: #f9f9f9;
-}
-
-.toggle-icon {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #999;
-  transition: color 0.3s ease;
-}
-
-.toggle-header[aria-expanded="true"] .toggle-icon {
-  color: #6200ff;
-}
-
-.update-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 1rem;
-  background: #f7f7f7;
-  border-left: 4px solid #6200ff;
-  border-radius: 0 0 5px 5px;
-}
-
-.update-content p {
-  font-family: "Lato";
-  padding: 1rem 0;
-  margin: 0;
-  color: #6200ff;
-}
-
-/* Accessibility improvements */
-.toggle-header:focus {
-  outline: 2px solid #6200ff;
-  outline-offset: 2px;
-}
-
-.message h1 {
-  font-size: 3.5rem;
-  color: #000000;
-}
-
-.message p {
-  font-size: 1.2rem;
-  color: #000000;
-  margin-top: 1rem;
-}
-
-.loading {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #111;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -1473,62 +1347,138 @@ footer p {
   margin-top: 2rem;
 }
 
-/* General Updates Page Styling */
-#updates-page {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 3rem 0;
-  background-color: #f4f4f9;
-  text-align: left; /* Align container text to the left */
+.site {
+  background-color: #000000;
 }
 
-.updates-container {
-  position: relative;
-  z-index: 2;
-  width: 90%;
-  max-width: 1500px;
-  padding: 2rem 2rem 2rem 2rem; /* Make sure padding is consistent on all sides */
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Wrapper for Dark Background */
+.wrapper {
+  background-color: #393939; /* Dark background for the entire page */
+  min-height: 100vh; /* Ensures the wrapper covers the full viewport */
+  display: flex;
+  justify-content: center; /* Centers the main content horizontally */
+  align-items: flex-start; /* Aligns the content to the top */
+  padding: 20px;
+}
+
+/* Main Section */
+main#updates-page {
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  background-color: #1e1e1e; /* Dark background for the main container */
+  color: #ccc; /* Lighter text for better contrast on dark background */
   border-radius: 8px;
-  display: flex;
-  flex-direction: column; /* Ensure elements are stacked vertically */
-  text-align: left; /* Align text to the left within container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
 }
 
-/* For the changelog container */
-.updates-container h2 {
-  font-size: 2.2rem; /* Adjust font size */
-  margin-bottom: 1rem; /* Space below the heading */
-  text-align: left;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+/* Rest of your styles remain the same */
+.updates-container {
+  background: #2a2a2a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 20px;
 }
 
+.updates-title {
+  font-size: 2em;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.updates-description {
+  font-size: 1.2em;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+/* Update Entry */
 .update-entry {
-  width: 100%; /* Ensure each entry takes up the full container width */
-  padding-left: 2rem; /* Add padding to left for alignment */
+  border-top: 1px solid #444; /* Dark border for entry separation */
+  padding: 15px 0;
 }
 
-.update-entry h3 {
-  font-family: "Lato", sans-serif;
-  font-size: 1.6rem; /* Adjust size for month/year */
-  font-weight: 600;
-  color: #333;
-  margin-top: 1rem; /* Space above the entries */
+.update-entry:first-child {
+  border-top: none;
+}
+
+.toggle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
   text-align: left;
-  padding-left: 0; /* Reset any additional left padding if needed */
+  color: #f0f0f0; /* Light text for headers */
+  transition: background-color 0.2s;
 }
 
-.update-entry p {
-  font-size: 1rem;
-  line-height: 1.5; /* Tighten up line spacing */
-  color: #555;
-  margin: 0.5rem 0; /* Adjust margin between paragraphs */
-  padding-left: 0; /* Ensure no extra left padding */
+.toggle-header:hover {
+  background-color: #333; /* Subtle hover effect */
+}
+
+.toggle-header:focus {
+  background-color: #444; /* Focus effect */
+}
+
+.toggle-icon {
+  font-size: 1.5em;
+  color: #999; /* Muted icon color */
+  transition: transform 0.2s;
+}
+
+.toggle-header[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Update Content */
+.update-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  padding: 0 10px;
+}
+
+.update-content p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #ddd; /* Lighter text for better visibility */
+}
+
+.update-content strong {
+  color: #fff; /* Bright white for emphasized text */
+}
+
+.update-content code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #333; /* Dark background for code blocks */
+  color: #f0f0f0; /* Light text for code */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Image Styling */
+.update-image {
+  margin: 20px 0; /* Adds spacing around the image block */
+  text-align: center; /* Centers the image */
+}
+
+.update-image img {
+  max-width: 50%; /* Ensures the image is responsive */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.image-caption {
+  font-size: 0.9em; /* Slightly smaller font for the caption */
+  color: #aaa; /* Muted color to differentiate the caption */
+  margin-top: 5px; /* Adds spacing between the image and caption */
+  text-align: center; /* Aligns caption with the image */
 }
 
 @media (max-width: 768px) {
