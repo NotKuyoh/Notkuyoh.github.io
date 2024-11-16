@@ -96,6 +96,18 @@
     </main>
 
     <script>
+      // Select the burger menu and nav elements
+      const burgerMenu = document.getElementById("burger-menu");
+      const navMenu = document.querySelector("nav ul");
+
+      // Toggle 'active' and 'menu-open' classes when burger menu is clicked
+      burgerMenu.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+        burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
+      });
+    </script>
+
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
         const toggles = document.querySelectorAll(".toggle-header");
         toggles.forEach((toggle) => {
