@@ -1478,7 +1478,7 @@ main#updates-page {
   font-size: 0.9em; /* Slightly smaller font for the caption */
   color: #aaa; /* Muted color to differentiate the caption */
   margin-top: 5px; /* Adds spacing between the image and caption */
-  text-align: center; /* Aligns caption with the image */
+  text-align: left; /* Aligns caption with the image */
 }
 
 @media (max-width: 768px) {
