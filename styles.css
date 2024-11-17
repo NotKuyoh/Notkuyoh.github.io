@@ -1359,13 +1359,9 @@ footer p {
 
 /* Main Section */
 main#updates-page {
-  padding: 20px;
   max-width: 800px;
   width: 100%;
-  background-color: #1e1e1e; /* Dark background for the main container */
   color: #ccc; /* Lighter text for better contrast on dark background */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
 }
 
 /* Updates Container */
