@@ -146,27 +146,7 @@ header nav ul {
   background-color: #2a006e;
 }
 
-/* Adjustments for tablet screens */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .hero {
-    height: 60vh; /* Adjust height for tablets */
-    background-size: cover; /* Ensure the image fully covers the area */
-    background-attachment: scroll; /* Disable fixed background for better visibility */
-  }
 
-  .hero-text {
-    margin-left: 8%;
-    top: 20%;
-  }
-
-  .hero-text h1 {
-    font-size: 4rem; /* Slightly reduce text size for tablets */
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-}
 
 .features-introduction {
   padding-bottom: 4rem;
@@ -197,6 +177,7 @@ header nav ul {
   padding: 4rem 10%;
   text-align: center;
   color: #333;
+  scroll-margin-top: 100px; /* Adjust this value to match your header's height */
 }
 
 .features h2 {
@@ -1409,6 +1390,7 @@ main#updates-page {
   text-align: left;
   color: #f0f0f0; /* Light text for headers */
   transition: background-color 0.2s;
+  border-radius: 10px;;
 }
 
 .toggle-header:hover {
@@ -1833,5 +1815,27 @@ main#updates-page {
 
   .btn {
     padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Adjustments for tablet screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero {
+    height: 60vh; /* Adjust height for tablets */
+    background-size: cover; /* Ensure the image fully covers the area */
+    background-attachment: scroll; /* Disable fixed background for better visibility */
+  }
+
+  .hero-text {
+    margin-left: 8%;
+    top: 20%;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem; /* Slightly reduce text size for tablets */
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
   }
 }
