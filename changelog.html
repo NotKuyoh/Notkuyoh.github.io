@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JOI - Changelog</title>
+    <title>JOI - Features Overview</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="Logo.svg" type="image/svg+xml" />
   </head>
@@ -21,6 +21,12 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
+      <!-- Burger menu icon -->
+      <div class="burger-menu" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
     <div class="wrapper">
@@ -155,6 +161,18 @@
     <footer>
       <p>© 2024 JOI™ - Your Personal Smart Home Voice Assistant</p>
     </footer>
+
+    <script>
+      // Select the burger menu and nav elements
+      const burgerMenu = document.getElementById("burger-menu");
+      const navMenu = document.querySelector("nav ul");
+
+      // Toggle 'active' and 'menu-open' classes when burger menu is clicked
+      burgerMenu.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+        burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
