@@ -8,6 +8,7 @@
   max-width: 100vw; /* Prevent horizontal overflow */
   --locked-color: #5fadbf;
   --unlocked-color: #ff5153;
+  outline: 1px solid red; /* Visualize all elements */
 }
 
 html,
@@ -258,14 +259,11 @@ header nav ul {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* Responsive column adjustment */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  max-width: 1200px; /* Set max-width for centering constraint */
-  margin: 0 auto; /* Center the grid within its container */
-  justify-items: center; /* Center items horizontally within each grid cell */
+  max-width: 100%; /* Enforces container boundaries */
+  margin: 0 auto;
+  justify-items: center;
 }
 
 /* Fixed Size for Individual Feature Cards */
@@ -1725,6 +1723,7 @@ main#updates-page {
 
 @media (max-width: 480px) {
   header nav ul {
+    overflow-x: hidden;
     position: absolute;
     top: 60px;
     right: 0;
@@ -1743,6 +1742,7 @@ main#updates-page {
   }
 
   header nav ul.active {
+    overflow-x: hidden;
     max-height: 500px;
     opacity: 1;
     visibility: visible;
