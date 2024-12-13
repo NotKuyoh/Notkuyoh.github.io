@@ -758,96 +758,148 @@ footer p {
   background-color: #2a006e;
 }
 
-/* Features Container */
+/* General Container Styling */
 .features-container {
-  background-color: #4000ff; /* Fallback color */
+  background-color: #333;
   background-image: url("banner_bg.jpg");
-  background-size: cover; /* Ensures the image covers the entire div */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 500px; /* Adjusted for better balance */
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6rem 2rem; /* Increased padding for a more spacious look */
-  text-align: center; /* Centering the content */
-}
-
-.features-header {
+  padding: 6rem 2rem;
   text-align: center;
-  width: 100%;
-  max-width: 1200px; /* Limiting the section width */
-  margin: 0 auto; /* Centering the header */
 }
 
 .features-header h2 {
   font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-size: 3.8rem; /* Slightly larger font for modern style */
-  color: rgb(255, 255, 255);
-  margin-bottom: 1.5rem; /* More spacing below the heading */
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .features-header p {
   font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 1.4rem; /* Reduced font size for better readability */
-  max-width: 1000px;
-  margin: 0 auto; /* Center the text */
-  color: rgb(255, 255, 255);
-  opacity: 0.85; /* Slight transparency for modern aesthetics */
-  line-height: 1.6; /* Better line height for readability */
-}
-
-/* Feature Detail Section */
-.features-detail {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for balanced look */
-  gap: 2.5rem; /* Increased gap for better spacing */
-  padding: 3rem 5%; /* Optimized padding */
-  background-color: #f4f4f4; /* Light background for contrast */
-  color: #333;
-}
-
-.feature-detail {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px; /* Rounded corners for modern style */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.feature-detail:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
-}
-
-.feature-detail h3 {
-  font-size: 1.8rem; /* Increased heading size for better readability */
-  font-weight: bold;
-  color: #333; /* Darker color for better contrast */
-  margin-bottom: 1rem;
-}
-
-.feature-detail p {
-  font-size: 1.1rem; /* Slightly larger font for better readability */
-  color: #555;
+  font-size: 1.2rem;
+  color: #ffffff;
   line-height: 1.6;
-  margin-bottom: 1.5rem; /* Adequate spacing between text and footer */
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.feature-detail img {
-  max-width: 60px; /* Adjusted to keep images compact */
+/* Text Features Section - Full Width and Centered Content */
+.text-features {
+  background-color: #333;
+  padding: 4rem 2rem;
+  width: 100%;              /* Make it full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;                /* Remove any default margins */
+}
+
+/* Centered Content Container */
+.text-features .content-wrapper {
+  width: 100%;
+  max-width: 1000px;        /* Limit the maximum width */
+}
+
+/* Individual Feature Cards */
+.text-feature {
+  background-color: #666;   /* Slightly lighter shade for contrast */
+  color: #fff;              /* White text for readability */
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  width: 100%;              /* Ensure the feature takes full width of the wrapper */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.text-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings and Paragraphs */
+.text-feature h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+.text-feature p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+
+/* New Features Detail Section - Full Width and Centered Content */
+.new-features-detail {
+  background-color: #555;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Center the content horizontally */
+  margin: 0;                 /* Remove default margins */
+}
+
+/* Content Wrapper to Limit Width */
+.new-features-detail .content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;         /* Limit the maximum width */
+}
+
+/* Individual Feature Cards */
+.new-feature-detail {
+  background-color: #333;    /* Slightly lighter shade for contrast */
+  color: #fff;               /* White text for readability */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.new-feature-detail:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Images in Feature Cards */
+.new-feature-detail img {
+  max-width: 70px;
   height: auto;
   margin-bottom: 1.5rem;
-  border-radius: 10px;
+}
+
+/* Headings in Feature Cards */
+.new-feature-detail h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0;           /* Light text color for contrast */
+}
+
+/* Paragraphs in Feature Cards */
+.new-feature-detail p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
 
 /* Centering Feature Intro */
 .feature-intro {
-  background-color: #393939;
+  background-color: #333;
   display: flex;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
@@ -1489,9 +1541,7 @@ main#updates-page {
   .update-content li {
     flex-direction: column; /* Stack content vertically on smaller screens */
   }
-}
-
-@media (max-width: 768px) {
+  
   header nav ul {
     position: absolute;
     top: 90px;
