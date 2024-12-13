@@ -766,7 +766,7 @@ footer p {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 500px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1526,10 +1526,22 @@ main#updates-page {
   text-align: center;
 }
 
+@media (max-width: 1224px) {
+  .features-container {
+    background-image: url(banner_bg_1.jpg);
+    max-height: 400px;
+  }
+}
+
 /* Responsive Styles for Desktop, Tablet, and Mobile */
 @media (max-width: 1024px) {
   .update-image img {
     max-width: 70%; /* Larger image on tablets */
+  }
+
+  .features-container {
+    background-image: url(banner_bg_2.jpg);
+    max-height: 300px;
   }
 }
 
