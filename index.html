@@ -13,21 +13,34 @@
         <a href="index.html"><h1>JOY</h1></a>
         <p>Your Personal Smart Home Voice Assistant</p>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-      <!-- Burger menu icon -->
-      <div class="burger-menu" id="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+    
+        <!-- Language Switch -->
+        <div class="language-switch">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
-    </header>
+
+    <!-- Burger menu icon -->
+    <div class="burger-menu" id="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  
 
     <main>
       <div class="hero">
@@ -326,6 +339,41 @@
         burgerMenu.classList.toggle("menu-open"); // This adds the downward shift
       });
     </script>
+    <script>
+      // Language Switcher Logic
+      const langToggle = document.getElementById('lang-toggle');
+      const tagline = document.getElementById('tagline');
+      const navLinks = document.querySelectorAll('.nav-link');
+    
+      const translations = {
+        en: {
+          tagline: 'Your Personal Smart Home Voice Assistant',
+        },
+        de: {
+          tagline: 'Ihr persönlicher Smart-Home-Sprachassistent',
+        },
+      };
+    
+      function updateLanguage(lang) {
+        // Update tagline
+        tagline.textContent = translations[lang].tagline;
+    
+        // Update nav links
+        navLinks.forEach(link => {
+          link.textContent = link.getAttribute(`data-${lang}`);
+        });
+      }
+    
+      // Event listener for language change
+      langToggle.addEventListener('change', (e) => {
+        const selectedLang = e.target.value;
+        updateLanguage(selectedLang);
+      });
+    
+      // Initialize with default language
+      updateLanguage('en');
+    </script>
+    
   
   </body>
 </html>

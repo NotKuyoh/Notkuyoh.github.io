@@ -21,6 +21,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Header Styling */
 header {
   position: fixed;
   top: 0;
@@ -33,6 +34,7 @@ header {
   background-color: #111;
 }
 
+/* Logo Styling */
 header .logo {
   display: flex;
   align-items: center;
@@ -44,17 +46,6 @@ header .logo a {
   padding-right: 0.5rem;
 }
 
-header nav ul li a {
-  color: #f0f0f0; /* Default color */
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-  color: #6200ff; /* Color change on hover */
-}
-
 header .logo h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -62,10 +53,6 @@ header .logo h1 {
   margin-right: 0.5rem;
   cursor: pointer;
   transition: color 0.3s ease;
-}
-
-header .logo h1:hover {
-  color: #6200ff; /* Optional: Change color on hover */
 }
 
 header .logo p {
@@ -77,23 +64,94 @@ header .logo p {
   max-width: 100%;
 }
 
+/* Nav and Language Switch Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between nav and language switch */
+}
+
+/* Navigation Styling */
 header nav {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  align-items: center;
 }
 
 header nav ul {
   display: flex;
   list-style: none;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.burger-menu {
-  display: none; /* Hidden by default */
+/* Navigation Links */
+header nav ul li a {
+  color: #f0f0f0;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Responsive Layout for Mobile */
+header nav ul li a:hover {
+  color: #6200ff;
+}
+
+/* Language Switch Styling */
+.language-switch {
+  display: flex;
+  align-items: center;
+}
+
+/* Switch Component */
+.switch {
+  --button-width: 3.5em;
+  --button-height: 2em;
+  --toggle-diameter: 1.5em;
+  --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #4296f4;
+}
+
+.slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+
+.slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+ 
 
 /* Hero section */
 .hero {
@@ -1549,7 +1607,7 @@ main#updates-page {
     background-image: url(banner_bg_3.jpg);
     max-height: 300px;
   }
-  
+
   .update-content li {
     flex-direction: column; /* Stack content vertically on smaller screens */
   }
