@@ -1529,7 +1529,7 @@ main#updates-page {
 @media (max-width: 1224px) {
   .features-container {
     background-image: url(banner_bg_1.jpg);
-    max-height: 400px;
+    min-height: 400px;
   }
 }
 
@@ -1538,11 +1538,6 @@ main#updates-page {
   .update-image img {
     max-width: 70%; /* Larger image on tablets */
   }
-
-  .features-container {
-    background-image: url(banner_bg_2.jpg);
-    max-height: 300px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1550,6 +1545,11 @@ main#updates-page {
     max-width: 100%; /* Full width image on phones */
   }
 
+  .features-container {
+    background-image: url(banner_bg_3.jpg);
+    max-height: 300px;
+  }
+  
   .update-content li {
     flex-direction: column; /* Stack content vertically on smaller screens */
   }
